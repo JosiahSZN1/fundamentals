@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+
 public class Example {
     public static void main(String[] args) {
 // Why Java?
@@ -95,6 +98,22 @@ public class Example {
 
         System.out.println(isRaining ? "Bring an umbrella" : "Have fun!");
 
+// ArrayLists (Dynamic Arrays)
+
+        ArrayList<Integer> myArray = new ArrayList<Integer>();
+
+        // Add items to the array (expanding the size)
+        myArray.add(10); // { 10 }
+        myArray.add(11); // { 10, 11 }
+        // To read values from the array,
+        // use .get() passing in the index
+        Integer num = myArray.get(0); // 10
+            
+        // Overwrite values in the array
+        // use .set() passing in the index 
+        // and the value you want to change it to
+        myArray.set(0, 9); // { 9, 11 }
+
 // Loops
         // System.out.println(myArray[0]);
         // System.out.println(myArray[1]);
@@ -126,36 +145,36 @@ public class Example {
         //     System.out.println("bar");
         //     i++;
         // }
-        // ArrayList<String> dynamicArray = new ArrayList<String>();
-        // dynamicArray.add("hello");
-        // dynamicArray.add("world");
-        // dynamicArray.add("etc");
-        // for (int i = 0; i < dynamicArray.size(); i++){
-        //     System.out.println(dynamicArray.get(i));
-        // }
+        ArrayList<String> dynamicArray = new ArrayList<String>();
+        dynamicArray.add("hello");
+        dynamicArray.add("world");
+        dynamicArray.add("etc");
+        for (int i = 0; i < dynamicArray.size(); i++){
+            System.out.println(dynamicArray.get(i));
+        }
 
     // Enhanced For Loop
-        // for(int i = 0; i < dynamicArray.size(); i++){
-        //     String name = dynamicArray.get(i);
-        //     System.out.println("hello " + name);
-        //     // other operations using name
-        // }
+        for(int i = 0; i < dynamicArray.size(); i++){
+            String name = dynamicArray.get(i);
+            System.out.println("hello " + name);
+            // other operations using name
+        }
 
-        // for(String name : dynamicArray){
-        //     System.out.println("hello " + name);
-        //     // other operations using name
-        // }
+        for(String name : dynamicArray){
+            System.out.println("hello " + name);
+            // other operations using name
+        }
 
         // for(element container : collection){
         //     // body statements
         // }
 
     // When to not use the Enhanced For Loop
-        // ArrayList<String> snacks = new ArrayList<String> ();
-        // snacks.add("Apples");
-        // snacks.add("Pretzels");
-        // snacks.add("Almonds");
-        // snacks.add("Yogurt");
+        ArrayList<String> snacks = new ArrayList<String> ();
+        snacks.add("Apples");
+        snacks.add("Pretzels");
+        snacks.add("Almonds");
+        snacks.add("Yogurt");
         // for(String snack : snacks ) {
         //     if(snack.charAt(0) == 'A') {
         //         snacks.remove(snack);
@@ -164,10 +183,18 @@ public class Example {
         // this will encounter an error like
         // Exception in thread "main" java.util.ConcurrentModificationException
 
-        // for(int i=0; i<snacks.size(); i++) {
-        //     if(snacks.get(i).charAt(0) == 'A') {
-        //         snacks.remove(i);
-        //     }
-        // }
+        for(int i=0; i<snacks.size(); i++) {
+            if(snacks.get(i).charAt(0) == 'A') {
+                snacks.remove(i);
+            }
+        }
+        System.out.println(snacks);
+
+        HashMap<String, String> userMap = new HashMap<String, String>();
+
+        userMap.put("nninja@codingdojo.com", "Nancy Ninja");
+        userMap.put("ssamurai@codingdojo.com", "Sam Samurai");
+
+        String name = userMap.get("nninja@codingdojo.com");
     }
 }
