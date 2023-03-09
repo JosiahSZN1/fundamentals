@@ -9,9 +9,9 @@ public class CafeJava {
         
         // Menu variables (add yours below)
         double mochaPrice = 4.5;
-        double dripCoffeePrice = 3.5;
-        double lattePrice = 4.25;
-        double cappucinoPrice = 3.75;
+        double dripCoffee = 3.5;
+        double latte = 4.25;
+        double cappucino = 3.75;
     
         // Customer name variables (add yours below)
         String customer1 = "Cindhuri";
@@ -32,13 +32,13 @@ public class CafeJava {
         System.out.println(isReadyOrder1 ? customer1 + readyMessage : customer1 + pendingMessage);
         if(isReadyOrder4) {
             System.out.println(customer4 + readyMessage);
-            System.out.println(displayTotalMessage + cappucinoPrice);
+            System.out.println(displayTotalMessage + cappucino);
         }
         else {
             System.out.println(customer4 + pendingMessage);
         }
-        System.out.println(displayTotalMessage + lattePrice * 2);
+        System.out.println(displayTotalMessage + latte * 2);
         System.out.println(isReadyOrder2 ? customer2 + readyMessage : customer2 + pendingMessage);
-        System.out.println(displayTotalMessage + (lattePrice - dripCoffeePrice));
+        System.out.println(displayTotalMessage + (latte - dripCoffee));
     }
 }
