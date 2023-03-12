@@ -1,6 +1,9 @@
 // Strings
+
     // Methods of the String class
-        // Length - Strings have a method to determin their length.
+
+        // Length - Strings have a method to determine their length.
+
 public class StringDemo {
     public static void main(String[] args) {
         // String ninja = "Coding Dojo is Awesome!";
@@ -8,6 +11,7 @@ public class StringDemo {
         // System.out.println( "String Length is : " + length );
 
         // Concatenate: A String method that  allows two strings to be squashed together. Since each string is immutable, this results in a brand-new string.
+
         String string1 = "My name is ";
         String string2 = "Michael";
         String string3 = string1.concat(string2);
@@ -15,6 +19,7 @@ public class StringDemo {
         // will output My name is Michael
 
         // Format: Another way of concatenating strings!
+
         // String ninja = String.format("Hi %s, you owe me $%.2f !", "Jack", 25.0);
         // System.out.println(ninja);
         // Will print out Hi Jack, you owe me $25.00 !
@@ -40,20 +45,20 @@ public class StringDemo {
         // Equality: We can compare the equality of a string in two ways. Do they refer to the exact same object, or do they have the same exact sequence of characters.
         // Normal string assignment
         // String a = "same string";
-        // String b = "same string";
+        String b = "same string";
         // System.out.println(a == b); // true
         // Creating new strings as separate objects (another way to create a String)
         // a = new String("same letters");
-        // b = new String("same letters");
+        b = new String("same letters");
         // System.out.println(a == b); // false. Not the same object in memory.
         // System.out.println(a.equals(b)); // true. same exact characters.
 
     // When to use == and when to use .equals()
-        // String a = new String( "Dojo" );
-        // System.out.println( a == "Dojo" );
-        // surprisingly this will print out `false`
         String a = new String( "Dojo" );
-        System.out.println( a.equals("Dojo") );
+        System.out.println( a == "Dojo" );
+        // surprisingly this will print out `false`
+        // String a = new String( "Dojo" );
+        // System.out.println( a.equals("Dojo") );
         // this actually will print out `true`
     }
 }
