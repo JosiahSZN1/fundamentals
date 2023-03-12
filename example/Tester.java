@@ -11,7 +11,7 @@ public class Tester {
     // Method signature: main String[]
     public static void main(String[] args) {
         System.out.println(greeting());
-        System.out.println(greeting("Jonathan"));
+        System.out.println(greeting("Josiah"));
     }
 
     // Method signature: greeting
