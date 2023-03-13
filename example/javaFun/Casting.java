@@ -6,7 +6,7 @@ public class Casting {
 
         // System.out.println(i);
 
-    // Explicit Casting
+        // Explicit Casting
         double d = 35.25;
         double dd = 35.99;
         
@@ -18,7 +18,7 @@ public class Casting {
         // System.out.println(i);
         System.out.println(ii);
     
-    // Implicit Casting
+        // Implicit Casting
         int i = 35;
         float f = i;
         System.out.println("The number is: " + f);
